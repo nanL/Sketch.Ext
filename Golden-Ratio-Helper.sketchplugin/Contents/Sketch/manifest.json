@@ -1,0 +1,79 @@
+{
+  "name": "Golden Ratio Helper",
+  "description": "Draw golden ratio helper lines automatically.",
+  "author": "NaN",
+  "identifier": "im.nan.Sketch.GoldenRatioHelper",
+  "appcast": "https://github.com/nanL/Sketch.Ext/raw/main/Golden-Ratio-Helper.sketchplugin/appcast.xml",
+  "version": "1.1.3",
+  "disableCocoaScriptPreprocessor": true,
+  "menu": {
+    "items": [
+      "role_of_thirds",
+      "golden_grid",
+      "-",
+      "golden_rectangle",
+      "golden_ratio_circle",
+      "golden_line_height",
+      "-",
+      "golden_spiral",
+      "golden_spiral_section",
+      "golden_spiral_section_circle",
+      "-",
+      "golden_triangle",
+      "harmonious_triangle",
+      "-"
+    ]
+  },
+  "commands": [
+    {
+      "name": "三分井字网格 Rule Of Thirds",
+      "identifier": "role_of_thirds",
+      "script": "Role Of Thirds.js"
+    },
+    {
+      "name": "黄金分割网格 Golden Ratio Grid",
+      "identifier": "golden_grid",
+      "script": "Golden Grid.js"
+    },
+    {
+      "name": "黄金分割矩形 Golden Rectangle",
+      "identifier": "golden_rectangle",
+      "script": "Golden Rectangle.js"
+    },
+    {
+      "name": "黄金分割圆形 Golden Ratio Circle",
+      "identifier": "golden_ratio_circle",
+      "script": "Golden Ratio Circle.js"
+    },
+    {
+      "name": "黄金分割行高 Golden Line Height",
+      "identifier": "golden_line_height",
+      "script": "Golden Line Height.js"
+    },
+    {
+      "name": "黄金螺旋 Golden Spiral",
+      "identifier": "golden_spiral",
+      "script": "Golden Spiral.js"
+    },
+    {
+      "name": "黄金螺旋分区 Golden Spiral Section",
+      "identifier": "golden_spiral_section",
+      "script": "Golden Spiral Section.js"
+    },
+    {
+      "name": "黄金螺旋分区圆形 Golden Spiral Section Circle",
+      "identifier": "golden_spiral_section_circle",
+      "script": "Golden Spiral Section Circle.js"
+    },
+    {
+      "name": "黄金三角 Golden Triangle",
+      "identifier": "golden_triangle",
+      "script": "Golden Triangle.js"
+    },
+    {
+      "name": "和谐三角 Harmonious Triangle",
+      "identifier": "harmonious_triangle",
+      "script": "Harmonious Triangle.js"
+    }
+  ]
+}
