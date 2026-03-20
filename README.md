@@ -3,11 +3,11 @@ Extensions for Sketch
 
 ## Install:
 
-1. Download \*.sketchplugin.zip & unzip it.
-2. Double click \*.sketchplugin to install the Plugin.
+1. Download **xxx.sketchplugin.zip** & unzip it.
+2. Double click **xxx.sketchplugin** to install.
 
 ## Plugins:
 
-- Golden Ratio Helper: ([download](./Golden-Ratio-Helper.sketchplugin.zip?raw=true)): Draw golden ratio helper lines automatically.
+- **Golden Ratio Helper**: Draw golden ratio helper lines automatically. ([Download](Golden-Ratio-Helper.sketchplugin.zip?raw=true))
 
-![Golden-Ratio-Helper](./STATIC/Golden-Ratio-Helper.png)
+![Golden-Ratio-Helper](STATIC/Golden-Ratio-Helper.png)
