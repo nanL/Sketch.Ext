@@ -8,4 +8,6 @@ Extensions for Sketch
 
 ## Plugins:
 
-- [Golden-Ratio-Helper.sketchplugin.zip](Golden-Ratio-Helper.sketchplugin.zip?raw=true): Draw golden ratio helper lines automatically.
+- Golden Ratio Helper: ([download](./Golden-Ratio-Helper.sketchplugin.zip?raw=true)): Draw golden ratio helper lines automatically.
+
+![Golden-Ratio-Helper](./STATIC/Golden-Ratio-Helper.png)
