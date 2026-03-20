@@ -5,7 +5,7 @@
   "identifier": "im.nan.Sketch.GoldenRatioHelper",
   "icon": "icon.png",
   "appcast": "https://github.com/nanL/Sketch.Ext/raw/main/Golden-Ratio-Helper.sketchplugin/appcast.xml",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "disableCocoaScriptPreprocessor": true,
   "menu": {
     "items": [
@@ -23,7 +23,8 @@
       "-",
       "golden_triangle",
       "harmonious_triangle",
-      "-"
+      "-",
+      "about"
     ]
   },
   "commands": [
@@ -81,6 +82,11 @@
       "name": "和谐三角 Harmonious Triangle",
       "identifier": "harmonious_triangle",
       "script": "Harmonious Triangle.js"
+    },
+    {
+      "name": "关于 About Golden Ratio Helper",
+      "identifier": "about",
+      "script": "About.js"
     }
   ]
 }
