@@ -5,7 +5,7 @@
   "identifier": "im.nan.Sketch.GoldenRatioHelper",
   "icon": "icon.png",
   "appcast": "https://github.com/nanL/Sketch.Ext/raw/main/Golden-Ratio-Helper.sketchplugin/appcast.xml",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "disableCocoaScriptPreprocessor": true,
   "menu": {
     "items": [
@@ -31,62 +31,62 @@
     {
       "name": "三等分九宫格 Rule Of Thirds",
       "identifier": "role_of_thirds",
-      "script": "Role Of Thirds.js"
+      "script": "dispatcher.js"
     },
     {
       "name": "黄金分割网格 Golden Ratio Grid",
       "identifier": "golden_grid",
-      "script": "Golden Grid.js"
+      "script": "dispatcher.js"
     },
     {
       "name": "矩形图标网格 Square Icon Grid",
       "identifier": "square_icon_grid",
-      "script": "Square Icon Grid.js"
+      "script": "dispatcher.js"
     },
     {
       "name": "黄金分割矩形 Golden Rectangle",
       "identifier": "golden_rectangle",
-      "script": "Golden Rectangle.js"
+      "script": "dispatcher.js"
     },
     {
       "name": "黄金分割圆形 Golden Ratio Circle",
       "identifier": "golden_ratio_circle",
-      "script": "Golden Ratio Circle.js"
+      "script": "dispatcher.js"
     },
     {
       "name": "黄金分割行高 Golden Line Height",
       "identifier": "golden_line_height",
-      "script": "Golden Line Height.js"
+      "script": "dispatcher.js"
     },
     {
       "name": "黄金螺旋 Golden Spiral",
       "identifier": "golden_spiral",
-      "script": "Golden Spiral.js"
+      "script": "dispatcher.js"
     },
     {
       "name": "黄金螺旋矩形 Golden Spiral Section",
       "identifier": "golden_spiral_section",
-      "script": "Golden Spiral Section.js"
+      "script": "dispatcher.js"
     },
     {
       "name": "黄金螺旋圆形 Golden Spiral Circle",
       "identifier": "golden_spiral_section_circle",
-      "script": "Golden Spiral Section Circle.js"
+      "script": "dispatcher.js"
     },
     {
       "name": "黄金三角 Golden Triangle",
       "identifier": "golden_triangle",
-      "script": "Golden Triangle.js"
+      "script": "dispatcher.js"
     },
     {
       "name": "和谐三角 Harmonious Triangle",
       "identifier": "harmonious_triangle",
-      "script": "Harmonious Triangle.js"
+      "script": "dispatcher.js"
     },
     {
       "name": "关于 About Golden Ratio Helper",
       "identifier": "about",
-      "script": "About.js"
+      "script": "dispatcher.js"
     }
   ]
 }
