@@ -45,6 +45,47 @@ function getTargetRects(context) {
   return selection.layers.map(getLayerRect)
 }
 
+function createDefaultSquare(parent, sideLength) {
+  return new sketch.ShapePath({
+    parent: parent,
+    name: 'Square Icon Grid Base',
+    frame: new sketch.Rectangle(0, 0, sideLength, sideLength),
+    shapeType: sketch.ShapePath.ShapeType.Rectangle,
+    style: getGuideStyle(),
+  })
+}
+
+function getSquareIconGridRects(context) {
+  var document = getDocument(context)
+  var selection = document.selectedLayers
+
+  if (!selection || selection.isEmpty) {
+    var parent = document.selectedPage
+    var square = createDefaultSquare(parent, 1024)
+
+    return [{
+      parent: parent,
+      x: square.frame.x,
+      y: square.frame.y,
+      width: square.frame.width,
+      height: square.frame.height,
+    }]
+  }
+
+  return selection.layers.map(function(layer) {
+    var rect = getLayerRect(layer)
+    var side = Math.min(rect.width, rect.height)
+
+    return {
+      parent: rect.parent,
+      x: rect.x + (rect.width - side) / 2,
+      y: rect.y + (rect.height - side) / 2,
+      width: side,
+      height: side,
+    }
+  })
+}
+
 function getTargetCircleSpecs(context) {
   var document = getDocument(context)
   var selection = document.selectedLayers
@@ -310,6 +351,56 @@ function drawGrid(parent, name, rect, ratio) {
   return finalizeGuideGroup(group)
 }
 
+function drawSquareIconGrid(parent, rect) {
+  var name = 'Square Icon Grid'
+  var group = createGuideGroup(parent, name, rect)
+  var side = Math.min(rect.width, rect.height)
+  var step = side / 8
+  var center = side / 2
+  var diameters = [side * 0.2, side * 0.5, side * 0.8]
+  var outerSquareSide = diameters[2]
+
+  for (var i = 1; i < 8; i += 1) {
+    makePolyline(group, name + ' Vertical ' + i, [
+      { x: step * i, y: 0 },
+      { x: step * i, y: side },
+    ])
+
+    makePolyline(group, name + ' Horizontal ' + i, [
+      { x: 0, y: step * i },
+      { x: side, y: step * i },
+    ])
+  }
+
+  makePolyline(group, name + ' Diagonal 1', [
+    { x: 0, y: 0 },
+    { x: side, y: side },
+  ])
+
+  makePolyline(group, name + ' Diagonal 2', [
+    { x: 0, y: side },
+    { x: side, y: 0 },
+  ])
+
+  diameters.forEach(function(diameter, index) {
+    makeOval(group, name + ' Ring ' + (index + 1), {
+      x: center - diameter / 2,
+      y: center - diameter / 2,
+      width: diameter,
+      height: diameter,
+    })
+  })
+
+  makeRectangle(group, name + ' Outer Square', {
+    x: center - outerSquareSide / 2,
+    y: center - outerSquareSide / 2,
+    width: outerSquareSide,
+    height: outerSquareSide,
+  })
+
+  return finalizeGuideGroup(group)
+}
+
 function drawGoldenTriangle(parent, rect) {
   var name = 'Golden Triangle'
   var group = createGuideGroup(parent, name, rect)
@@ -558,6 +649,7 @@ function showError(error) {
 
 module.exports = {
   createGuideGroup: createGuideGroup,
+  drawSquareIconGrid: drawSquareIconGrid,
   drawGoldenSpiral: drawGoldenSpiral,
   drawGoldenRatioCircle: drawGoldenRatioCircle,
   drawGoldenSpiralSection: drawGoldenSpiralSection,
@@ -566,6 +658,7 @@ module.exports = {
   drawGrid: drawGrid,
   drawHarmoniousTriangle: drawHarmoniousTriangle,
   finalizeGuideGroup: finalizeGuideGroup,
+  getSquareIconGridRects: getSquareIconGridRects,
   getTargetRects: getTargetRects,
   getTargetCircleSpecs: getTargetCircleSpecs,
   makeGoldenRectangle: makeGoldenRectangle,
