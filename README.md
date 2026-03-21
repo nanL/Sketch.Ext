@@ -14,4 +14,4 @@ Extensions for Sketch
 
 ![Golden-Ratio-Helper](STATIC/Golden-Ratio-Helper-1.png)
 
-Thanks to: [Lorenz Wöhr](https://github.com/lorenzwoehr/Golden-Ratio-Line-Height-Sketch-Plugin), [chord.luo](https://github.com/ichord/sketch-divine-proportions)
+Thanks to: [Lorenz Wöhr](https://github.com/lorenzwoehr/Golden-Ratio-Line-Height-Sketch-Plugin), [chord.luo](https://github.com/ichord/sketch-divine-proportions), [Codex](https://openai.com/codex/), 
