@@ -5,7 +5,7 @@
   "identifier": "im.nan.Sketch.GoldenRatioHelper",
   "icon": "icon.png",
   "appcast": "https://github.com/nanL/Sketch.Ext/raw/main/Golden-Ratio-Helper.sketchplugin/appcast.xml",
-  "version": "1.1.7",
+  "version": "1.1.8",
   "disableCocoaScriptPreprocessor": true,
   "menu": {
     "items": [

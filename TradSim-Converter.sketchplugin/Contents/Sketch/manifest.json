@@ -5,7 +5,7 @@
   "identifier": "im.nan.Sketch.TradSimConverter",
   "icon": "icon.png",
   "appcast": "https://github.com/nanL/Sketch.Ext/raw/main/TradSim-Converter.sketchplugin/appcast.xml",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "disableCocoaScriptPreprocessor": true,
   "menu": {
     "items": [

@@ -8,16 +8,18 @@ Extensions for Sketch
 
 ## Plugins:
 
-- **Golden Ratio Helper**: Draw golden ratio helper lines automatically. ([Download](Golden-Ratio-Helper.sketchplugin.zip?raw=true))
+### * Golden Ratio Helper: 
 
-![Golden-Ratio-Helper](STATIC/Golden-Ratio-Helper-0.png)
-
-![Golden-Ratio-Helper](STATIC/Golden-Ratio-Helper-1.png)
+Draw golden ratio helper lines automatically. ([Download](Golden-Ratio-Helper.sketchplugin.zip?raw=true))
 
 Thanks: [Lorenz Wöhr](https://github.com/lorenzwoehr/Golden-Ratio-Line-Height-Sketch-Plugin), [chord.luo](https://github.com/ichord/sketch-divine-proportions), [Codex](https://openai.com/codex/),
 
-- **TradSim Converter**：Convert text layers between Simplified and Traditional Chinese. ([Download](TradSim-Converter.sketchplugin.zip?raw=true))
+![Golden-Ratio-Helper](STATIC/Golden-Ratio-Helper-0.png)
 
-![TradSim Converter](STATIC/TradSim-Converter-0.png)
+### * TradSim Converter: 
+
+Convert text layers between Simplified and Traditional Chinese. ([Download](TradSim-Converter.sketchplugin.zip?raw=true))
 
 Thanks: [TongWen Dict](https://github.com/tongwentang/tongwen-dict), [Codex](https://openai.com/codex/),
+
+![TradSim Converter](STATIC/TradSim-Converter-0.png)
