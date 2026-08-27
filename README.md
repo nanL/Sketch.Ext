@@ -14,4 +14,10 @@ Extensions for Sketch
 
 ![Golden-Ratio-Helper](STATIC/Golden-Ratio-Helper-1.png)
 
-Thanks to: [Lorenz Wöhr](https://github.com/lorenzwoehr/Golden-Ratio-Line-Height-Sketch-Plugin), [chord.luo](https://github.com/ichord/sketch-divine-proportions), [Codex](https://openai.com/codex/), 
+Thanks: [Lorenz Wöhr](https://github.com/lorenzwoehr/Golden-Ratio-Line-Height-Sketch-Plugin), [chord.luo](https://github.com/ichord/sketch-divine-proportions), [Codex](https://openai.com/codex/),
+
+- **TradSim Converter**：Convert text layers between Simplified and Traditional Chinese. ([Download](TradSim-Converter.sketchplugin.zip?raw=true))
+
+![TradSim Converter](STATIC/TradSim-Converter-0.png)
+
+Thanks: [TongWen Dict](https://github.com/tongwentang/tongwen-dict), [Codex](https://openai.com/codex/),

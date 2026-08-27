@@ -1,0 +1,35 @@
+{
+  "name": "TradSim Converter",
+  "description": "Convert selected text layers between Simplified and Traditional Chinese.",
+  "authors": "NaN, Codex",
+  "identifier": "im.nan.Sketch.TradSimConverter",
+  "icon": "icon.png",
+  "appcast": "https://github.com/nanL/Sketch.Ext/raw/main/TradSim-Converter.sketchplugin/appcast.xml",
+  "version": "1.0.1",
+  "disableCocoaScriptPreprocessor": true,
+  "menu": {
+    "items": [
+      "simplified_to_traditional",
+      "traditional_to_simplified",
+      "-",
+      "toggle_conversion_mode"
+    ]
+  },
+  "commands": [
+    {
+      "name": "简体 to 繁体",
+      "identifier": "simplified_to_traditional",
+      "script": "dispatcher.js"
+    },
+    {
+      "name": "繁体 to 简体",
+      "identifier": "traditional_to_simplified",
+      "script": "dispatcher.js"
+    },
+    {
+      "name": "切换模式：按字 or 按词",
+      "identifier": "toggle_conversion_mode",
+      "script": "dispatcher.js"
+    }
+  ]
+}
