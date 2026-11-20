@@ -16,6 +16,10 @@ Thanks: [Lorenz Wöhr](https://github.com/lorenzwoehr/Golden-Ratio-Line-Height-S
 
 ![Golden-Ratio-Helper](STATIC/Golden-Ratio-Helper-0.png)
 
+### * Localization Helper:
+
+Translate selected text layers using Baidu Translate. ([Download](https://github.com/nanL/Sketch.Ext/raw/main/Localization-Helper.sketchplugin.zip))
+
 ### * TradSim Converter: 
 
 Convert text layers between Simplified and Traditional Chinese. ([Download](https://raw.githubusercontent.com/nanL/Sketch.Ext/main/TradSim-Converter.sketchplugin.zip?raw=true))

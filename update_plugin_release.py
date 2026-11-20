@@ -16,9 +16,10 @@ def bump_patch_version(version):
 
 
 def should_include_in_zip(path):
+    ignored_directories = {"tests", "__MACOSX"}
     ignored_names = {".DS_Store", "Thumbs.db"}
 
-    if "__MACOSX" in path.parts:
+    if any(part in ignored_directories for part in path.parts):
         return False
 
     if path.name in ignored_names:
@@ -65,7 +66,7 @@ def update_plugin(plugin_dir):
 
     with ZipFile(zip_path, "w", compression=ZIP_DEFLATED) as archive:
         for path in sorted(plugin_dir.rglob("*")):
-            if path.is_file() and should_include_in_zip(path):
+            if path.is_file() and should_include_in_zip(path.relative_to(plugin_dir)):
                 archive.write(path, path.relative_to(root))
 
     print(f"Updated {plugin_dir.name}: {current_version} -> {new_version}")
