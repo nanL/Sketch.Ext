@@ -1,16 +1,44 @@
 {
   "name": "Localization Helper",
   "description": "Translate selected text layers using Baidu Translate.",
-  "author": "NaN",
+  "authors": "NaN",
   "identifier": "im.nan.Sketch.LocalizationHelper",
   "appcast": "https://github.com/nanL/Sketch.Ext/raw/main/Localization-Helper.sketchplugin/appcast.xml",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "disableCocoaScriptPreprocessor": true,
   "commands": [
-    { "name": "to 简体", "identifier": "toSimplified", "script": "commands.js", "handler": "toSimplified" },
-    { "name": "to 繁体", "identifier": "toTraditional", "script": "commands.js", "handler": "toTraditional" },
-    { "name": "to 英文", "identifier": "toEnglish", "script": "commands.js", "handler": "toEnglish" },
-    { "name": "设置", "identifier": "settings", "script": "commands.js", "handler": "settings" }
+    {
+      "name": "to 简体",
+      "identifier": "toSimplified",
+      "script": "commands.js",
+      "handler": "toSimplified"
+    },
+    {
+      "name": "to 繁体",
+      "identifier": "toTraditional",
+      "script": "commands.js",
+      "handler": "toTraditional"
+    },
+    {
+      "name": "to 英文",
+      "identifier": "toEnglish",
+      "script": "commands.js",
+      "handler": "toEnglish"
+    },
+    {
+      "name": "设置",
+      "identifier": "settings",
+      "script": "commands.js",
+      "handler": "settings"
+    }
   ],
-  "menu": { "items": ["toSimplified", "toTraditional", "toEnglish", "-", "settings"] }
+  "menu": {
+    "items": [
+      "toSimplified",
+      "toTraditional",
+      "toEnglish",
+      "-",
+      "settings"
+    ]
+  }
 }
