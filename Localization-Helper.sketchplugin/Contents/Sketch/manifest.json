@@ -4,7 +4,7 @@
   "authors": "NaN",
   "identifier": "im.nan.Sketch.LocalizationHelper",
   "appcast": "https://github.com/nanL/Sketch.Ext/raw/main/Localization-Helper.sketchplugin/appcast.xml",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "disableCocoaScriptPreprocessor": true,
   "commands": [
     {
@@ -26,6 +26,12 @@
       "handler": "toEnglish"
     },
     {
+      "name": "工具栏",
+      "identifier": "toolbar",
+      "script": "commands.js",
+      "handler": "toolbar"
+    },
+    {
       "name": "设置",
       "identifier": "settings",
       "script": "commands.js",
@@ -34,6 +40,8 @@
   ],
   "menu": {
     "items": [
+      "toolbar",
+      "-",
       "toSimplified",
       "toTraditional",
       "toEnglish",

@@ -4,6 +4,53 @@ var Settings = require('sketch/settings')
 var md5 = require('./md5')
 var KEY = 'baiduCredentials'
 
+function toolbar() {
+  var key = 'im.nan.Sketch.LocalizationHelper.toolbar'
+  var windows = NSThread.mainThread().threadDictionary()
+  var existing = windows.objectForKey(key)
+  if (existing) { existing.orderFrontRegardless(); return }
+
+  var panel = NSPanel.alloc().initWithContentRect_styleMask_backing_defer(
+    NSMakeRect(0, 0, 100, 136),
+    NSWindowStyleMaskTitled | NSWindowStyleMaskClosable | NSWindowStyleMaskUtilityWindow | NSWindowStyleMaskNonactivatingPanel,
+    NSBackingStoreBuffered, false)
+  var fiber = require('sketch/async').createFiber()
+  fiber.onCleanup(function() {
+    windows.removeObjectForKey(key)
+    panel.orderOut(null)
+    panel.close()
+  })
+  try {
+    panel.setTitle('Localization Helper')
+    panel.setFloatingPanel(true)
+    panel.setHidesOnDeactivate(true)
+    panel.setBecomesKeyOnlyIfNeeded(true)
+    panel.setReleasedWhenClosed(false)
+    panel.setMovableByWindowBackground(true)
+    var actions = [
+      { title: 'to 简体', handler: toSimplified },
+      { title: 'to 繁体', handler: toTraditional },
+      { title: 'to 英文', handler: toEnglish }
+    ]
+    actions.forEach(function(action, index) {
+      var button = NSButton.alloc().initWithFrame(NSMakeRect(12, 92 - index * 40, 76, 32))
+      button.setTitle(action.title)
+      button.setBezelStyle(NSBezelStyleRounded)
+      button.setButtonType(NSButtonTypeMomentaryPushIn)
+      button.setToolTip('将当前选中的文本图层转换为' + action.title.slice(3))
+      button.setCOSJSTargetFunction(function() { action.handler() })
+      panel.contentView().addSubview(button)
+    })
+    panel.standardWindowButton(NSWindowCloseButton).setCOSJSTargetFunction(function() { fiber.cleanup() })
+    windows.setObject_forKey(panel, key)
+    panel.center()
+    panel.orderFrontRegardless()
+  } catch (error) {
+    fiber.cleanup()
+    UI.alert('工具栏打开失败', error.message)
+  }
+}
+
 function settings() {
   var saved = Settings.settingForKey(KEY) || {}
   var alert = NSAlert.alloc().init()
@@ -102,10 +149,23 @@ function request(text, from, to, credentials, callback) {
   return function() { finished = true; cleanup() }
 }
 
+function collectTextLayers(selectedLayers) {
+  var layers = []
+  var seen = []
+  function visit(layer) {
+    if (seen.indexOf(layer.id) !== -1) return
+    seen.push(layer.id)
+    if (layer.type === 'Text' && layer.text.trim()) layers.push(layer)
+    else if (layer.type === 'Group') layer.layers.forEach(visit)
+  }
+  selectedLayers.forEach(visit)
+  return layers
+}
+
 function translate(to) {
   var document = sketch.getSelectedDocument()
-  var layers = document ? document.selectedLayers.layers.filter(function(layer) { return layer.type === 'Text' && layer.text.trim() }) : []
-  if (!layers.length) { UI.message('请选择一个或多个非空文本图层'); return }
+  var layers = document ? collectTextLayers(document.selectedLayers.layers) : []
+  if (!layers.length) { UI.message('请选择非空文本图层或包含文本的编组'); return }
   var credentials = Settings.settingForKey(KEY)
   if (!credentials || !credentials.appid || !credentials.secret) { settings(); return }
   var jobs = layers.map(function(layer) { return { layer: layer, original: layer.text } })
