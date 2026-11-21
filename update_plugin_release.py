@@ -17,7 +17,7 @@ def bump_patch_version(version):
 
 def should_include_in_zip(path):
     ignored_directories = {"tests", "__MACOSX"}
-    ignored_names = {".DS_Store", "Thumbs.db"}
+    ignored_names = {".DS_Store", "Thumbs.db", "README.md", "AGENTS.md"}
 
     if any(part in ignored_directories for part in path.parts):
         return False

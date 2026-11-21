@@ -14,16 +14,18 @@ Draw golden ratio helper lines automatically. ([Download](https://raw.githubuser
 
 Thanks: [Lorenz Wöhr](https://github.com/lorenzwoehr/Golden-Ratio-Line-Height-Sketch-Plugin), [chord.luo](https://github.com/ichord/sketch-divine-proportions), [Codex](https://openai.com/codex/),
 
-![Golden-Ratio-Helper](STATIC/Golden-Ratio-Helper-0.png)
+![Golden-Ratio-Helper](STATIC/Golden-Ratio-Helper.png)
 
 ### * Localization Helper:
 
 Translate selected text layers using Baidu Translate. ([Download](https://github.com/nanL/Sketch.Ext/raw/main/Localization-Helper.sketchplugin.zip))
 
+![Golden-Ratio-Helper](STATIC/Localization-Helper.png)
+
 ### * TradSim Converter: 
 
-Convert text layers between Simplified and Traditional Chinese. ([Download](https://raw.githubusercontent.com/nanL/Sketch.Ext/main/TradSim-Converter.sketchplugin.zip?raw=true))
+Convert text layers between Simplified and Traditional Chinese. ([Download](./raw/main/TradSim-Converter.sketchplugin.zip))
 
 Thanks: [TongWen Dict](https://github.com/tongwentang/tongwen-dict), [Codex](https://openai.com/codex/),
 
-![TradSim Converter](STATIC/TradSim-Converter-0.png)
+![TradSim Converter](STATIC/TradSim-Converter.png)
