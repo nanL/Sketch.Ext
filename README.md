@@ -10,7 +10,7 @@ Extensions for Sketch
 
 ### * Golden Ratio Helper: 
 
-Draw golden ratio helper lines automatically. ([Download](https://raw.githubusercontent.com/nanL/Sketch.Ext/main/Golden-Ratio-Helper.sketchplugin.zip))
+Draw golden ratio helper lines automatically. ([Download](./Golden-Ratio-Helper.sketchplugin.zip?raw=true))
 
 Thanks: [Lorenz Wöhr](https://github.com/lorenzwoehr/Golden-Ratio-Line-Height-Sketch-Plugin), [chord.luo](https://github.com/ichord/sketch-divine-proportions), [Codex](https://openai.com/codex/),
 
@@ -18,7 +18,7 @@ Thanks: [Lorenz Wöhr](https://github.com/lorenzwoehr/Golden-Ratio-Line-Height-S
 
 ### * Localization Helper:
 
-Translate selected text layers using Baidu Translate. ([Download](https://github.com/nanL/Sketch.Ext/raw/main/Localization-Helper.sketchplugin.zip))
+Translate selected text layers using Baidu Translate. ([Download](./Localization-Helper.sketchplugin.zip?raw=true))
 
 ![Golden-Ratio-Helper](STATIC/Localization-Helper.png)
 
