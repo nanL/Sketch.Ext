@@ -24,7 +24,7 @@ Translate selected text layers using Baidu Translate. ([Download](https://github
 
 ### * TradSim Converter: 
 
-Convert text layers between Simplified and Traditional Chinese. ([Download](./TradSim-Converter.sketchplugin.zip))
+Convert text layers between Simplified and Traditional Chinese. ([Download](./TradSim-Converter.sketchplugin.zip?raw=true))
 
 Thanks: [TongWen Dict](https://github.com/tongwentang/tongwen-dict), [Codex](https://openai.com/codex/),
 
